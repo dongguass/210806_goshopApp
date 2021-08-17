@@ -8,10 +8,15 @@
 <script>
   //引入底部导航组件
   import footerGuider from "./components/footer-guider/footerGuider";
+  import {reqCategorys} from './api'
     export default {
       name: "App",
       components:{
           footerGuider
+      },
+      async mounted() {
+       const result = await reqCategorys();
+       console.log(result)
       }
     }
 </script>
