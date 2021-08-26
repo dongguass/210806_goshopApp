@@ -8,15 +8,19 @@
 <script>
   //引入底部导航组件
   import footerGuider from "./components/footer-guider/footerGuider";
-  import {reqCategorys} from './api'
+  import {mapActions} from "vuex";
     export default {
       name: "App",
       components:{
           footerGuider
       },
-      async mounted() {
-       const result = await reqCategorys();
-       console.log(result)
+      mounted() {
+        this.getAddress();
+        this.getUserInfoAsync();
+      },
+
+      methods:{
+        ...mapActions(['getAddress', 'getUserInfoAsync'])
       }
     }
 </script>

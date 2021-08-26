@@ -1,24 +1,5 @@
-# goshop
+<这个外卖项目的目的是练习并且熟悉Vue的基本语法，熟练使用Vuex进行状态管理，熟练使用Vue-router>
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 #对项目中配置文件进行简单说明
 1. config文件夹中的 index.js文件可以指定后台服务的端口号和静态资源文件夹路径
@@ -45,5 +26,21 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 #关于路由器
 我们配置好路由器之后，在main.js中注册路由器，就可以在任何组件内，通过this.$router 访问路由器，也可以通过 this.$route 访问当前路由。
 
-#组件文件夹components
-##
+#components组件文件夹
+##footer-guider
+这个组件是用来显示,App的底部切换界面按钮的，给每个a标签都绑定
+一个动态class类on，实现点击切换样式，并且绑定点击事件实现路由跳转。
+##headerTop
+公共头部样式，并使用具名插槽。
+##shopList
+外卖页的商家列表。在计算属性中，使用...mapState(['shops'])获取Vuex状态。
+然后使用v-for遍历shops，异步显示商家信息等。
+##star
+该组件是通过商家信息中的评分来显示对应的星数，算法逻辑如代码所示。
+
+
+
+
+
+
+

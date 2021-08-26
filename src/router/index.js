@@ -7,6 +7,11 @@ import personalPage from "../pages/personal-page/personalPage";
 import searchPage from "../pages/search-page/searchPage";
 import shopList from "../pages/shop-list/shopList";
 import login from "../pages/login/login";
+import userPage from "../pages/userinfo/userPage";
+import shopPage from "../pages/shop/shopPage";
+import shopCommentPage from "../pages/shop/shopcomment/shopCommentPage";
+import shopGoodsPage from "../pages/shop/shopgoods/shopGoodsPage";
+import shopInfoPage from "../pages/shop/shopinfo/shopInfoPage";
 //使用路由插件
 Vue.use(VueRouter);
 
@@ -45,6 +50,32 @@ export default new VueRouter({
     {
       path:'/loginPage',
       component: login
+    },
+    {
+      path:'/userInfo',
+      component: userPage
+    },
+    {
+      path:'/shopDetail',
+      component: shopPage,
+      children: [
+        {
+          path: '/shopDetail/goods',
+          component: shopGoodsPage
+        },
+        {
+          path: '/shopDetail/comment',
+          component: shopCommentPage
+        },
+        {
+          path: '/shopDetail/info',
+          component: shopInfoPage
+        },
+        {
+          path:'/',
+          redirect:'/shopDetail/goods'
+        }
+      ]
     },
     //重定向指向首页
     {

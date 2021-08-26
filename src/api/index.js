@@ -30,3 +30,8 @@ export const phoneLogin = (phone, code) => ajax('/api/login_sms', {phone, code},
 // 获取用户信息(根据会话)
 export const reqUser = () => ajax('/api/userinfo');
 
+//根据经纬度和关键字搜说商铺列表
+export const reqSearchShop = (geohash, keyword) => ajax('/api/search_shops',{geohash, keyword});
+
+//用户等处
+export const reqLoginOut = ()=> ajax('/api/logout');

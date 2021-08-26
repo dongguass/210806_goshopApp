@@ -9,11 +9,12 @@
 </template>
 
 <script>
+
     export default {
-        name: "headerTop",
+      name: "headerTop",
       props: {
           title: String
-      }
+      },
     }
 </script>
 

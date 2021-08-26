@@ -11,11 +11,12 @@
 
 <script>
   import headerTop from "../../components/headerTop/headerTop";
+
     export default {
         name: "shopList",
       components:{
         headerTop
-      }
+      },
     }
 </script>
 
