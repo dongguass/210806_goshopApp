@@ -35,3 +35,19 @@ export const reqSearchShop = (geohash, keyword) => ajax('/api/search_shops',{geo
 
 //用户等处
 export const reqLoginOut = ()=> ajax('/api/logout');
+
+/**
+ * 获取商家信息
+ */
+export const reqShopInfo = () => ajax('/info');
+
+/**
+ * 获取商家评价数组
+ */
+export const reqShopRatings = () => ajax('/comment');
+
+/**
+ * 获取商家商品数组
+ */
+export const reqShopGoods = () => ajax('/goods');
+

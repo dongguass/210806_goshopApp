@@ -1,5 +1,4 @@
 <template>
-
     <div>
       <shopHeader></shopHeader>
       <div class="tab">
@@ -23,10 +22,28 @@
         name: "shopPage",
       components:{
           shopHeader
+      },
+
+      mounted() {
+          this.$store.dispatch('getShopInfo')
       }
     }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-
+  @import "../../common/mixins.styl"
+  .tab
+    height 40px
+    line-height 40px
+    bottom-border-1px(rgba(7, 17, 27, 0.1))
+    .tab-item
+      float left
+      width 33.33333%
+      text-align center
+      font-size 14px
+      color rgb(77, 85, 93)
+      a
+        display block
+        &.router-link-active
+          color #02a774
 </style>
